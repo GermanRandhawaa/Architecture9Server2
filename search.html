@@ -23,7 +23,7 @@
             const searchWord = document.getElementById("search-word").value;
 
             const xhr = new XMLHttpRequest();
-            xhr.open("GET", `https://architecuture9-9d5d1a4e9e72.herokuapp.com/api/v1/definition/${searchWord}`, true);
+            xhr.open("GET", `https://architecture9server1.onrender.com/api/v1/definition/${searchWord}`, true);
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4) {
                     searchResponseDiv.textContent = xhr.responseText;

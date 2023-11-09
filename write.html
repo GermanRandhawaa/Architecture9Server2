@@ -31,7 +31,7 @@
 
       function populateLanguagesDropdowns() {
         const xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://architecuture9-9d5d1a4e9e72.herokuapp.com/api/v1/languages", true);
+        xhr.open("GET", "https://architecture9server1.onrender.com/api/v1/languages", true);
         xhr.onreadystatechange = function () {
           if (xhr.readyState === 4 && xhr.status === 200) {
             const response = JSON.parse(xhr.responseText);
@@ -66,7 +66,7 @@
         ).value;
 
         const xhr = new XMLHttpRequest();
-        xhr.open("GET", `https://architecuture9-9d5d1a4e9e72.herokuapp.com/api/v1/definition/${word}`, true);
+        xhr.open("GET", `https://architecture9server1.onrender.com/api/v1/definition/${word}`, true);
         xhr.onreadystatechange = function () {
           if (xhr.readyState === 4) {
             if (xhr.status === 200) {
@@ -75,7 +75,7 @@
                   definition,
                 };
                 const updateXhr = new XMLHttpRequest();
-                updateXhr.open("PATCH", `https://architecuture9-9d5d1a4e9e72.herokuapp.com/api/v1/definition/${word}`, true);
+                updateXhr.open("PATCH", `https://architecture9server1.onrender.com/api/v1/definition/${word}`, true);
                 updateXhr.setRequestHeader("Content-Type", "application/json");
                 updateXhr.onreadystatechange = function () {
                   if (updateXhr.readyState === 4) {
@@ -98,7 +98,7 @@
                 "definition-language": definitionLanguage,
               };
               const createXhr = new XMLHttpRequest();
-              createXhr.open("POST", "https://architecuture9-9d5d1a4e9e72.herokuapp.com/api/v1/definition", true);
+              createXhr.open("POST", "https://architecture9server1.onrender.com/api/v1/definition", true);
               createXhr.setRequestHeader("Content-Type", "application/json");
               createXhr.onreadystatechange = function () {
                 if (createXhr.readyState === 4) {
